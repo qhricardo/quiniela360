@@ -1,13 +1,13 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAihccBQjyZrEqssWWRscD_CVDZeg4WGE0",
-  authDomain: "quiniela-mundial-c8e6f.firebaseapp.com",
+  apiKey: "AIzaSyA48HXFNhkFVWmcOnJZHb6cZp2X_QE-pYk",
+  authDomain: "quieniela360.firebaseapp.com",
   databaseURL: "https://quiniela-mundial-c8e6f-default-rtdb.firebaseio.com",
-  projectId: "quiniela-mundial-c8e6f",
-  storageBucket: "quiniela-mundial-c8e6f.firebasestorage.app",
-  messagingSenderId: "289106224309",
-  appId: "1:289106224309:web:1602659bf18a4ed0df8afc",
-  measurementId: "G-9K40S3SSJ9"
+  projectId: "quieniela360",
+  storageBucket: "quieniela360.firebasestorage.app",
+  messagingSenderId: "405592293769",
+  appId: "1:405592293769:web:d0c4026fd31875d09ba158",
+  measurementId: "G-53BKRGYYGV"
 };
 
 // Inicialización segura
