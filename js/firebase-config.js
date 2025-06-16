@@ -2,7 +2,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyA48HXFNhkFVWmcOnJZHb6cZp2X_QE-pYk",
   authDomain: "quieniela360.firebaseapp.com",
-  databaseURL: "https://quiniela-mundial-c8e6f-default-rtdb.firebaseio.com",
+  databaseURL: "https://quieniela360-default-rtdb.firebaseio.com",
   projectId: "quieniela360",
   storageBucket: "quieniela360.firebasestorage.app",
   messagingSenderId: "405592293769",
