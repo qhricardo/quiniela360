@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,41 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #006847 0%, #ce1126 100%);
+            background-image: url('https://unsplash.com/es/fotos/una-vista-aerea-de-un-campo-de-futbol-desde-arriba-hurPNHKDcrk'); /* Cambia esta URL por la tuya */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
         .login-container {
-            background: white;
+            background: rgba(255, 255, 255, 0.95); /* Blanco casi sólido, pero ligeramente translúcido */
             padding: 2rem;
             border-radius: 10px;
             width: 350px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
+
         h1 {
             color: #006847;
             text-align: center;
             margin-bottom: 1.5rem;
         }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
+
         .form-group input {
             width: 100%;
             padding: 10px;
@@ -41,6 +49,7 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
         button {
             width: 100%;
             padding: 12px;
@@ -52,9 +61,11 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         button:hover {
             background: #004d33;
         }
+
         #form-message {
             margin-top: 1rem;
             padding: 10px;
@@ -62,14 +73,17 @@
             display: none;
             text-align: center;
         }
+
         .error {
             background: #ffebee;
             color: #c62828;
         }
+
         .register-link {
             text-align: center;
             margin-top: 1.5rem;
         }
+
         .register-link a {
             color: #006847;
             text-decoration: none;
@@ -116,13 +130,9 @@
             const messageDiv = document.getElementById('form-message');
 
             try {
-                // Intento de autenticación
                 await firebase.auth().signInWithEmailAndPassword(email, password);
-                
-                // Redirección exitosa
                 window.location.href = "index.html";
             } catch (error) {
-                // Manejo de errores
                 let errorMessage;
                 switch(error.code) {
                     case 'auth/invalid-email':
@@ -140,12 +150,10 @@
                     default:
                         errorMessage = 'Error al iniciar sesión';
                 }
-                
                 messageDiv.textContent = errorMessage;
                 messageDiv.style.display = 'block';
             }
         });
     </script>
 </body>
-</html>
 </html>
