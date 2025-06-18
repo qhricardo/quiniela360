@@ -1,52 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@swarmcloud/hls/p2p-engine.min.js"></script>
-    <style>
-    body, html {margin: 0;padding: 0;width: 100%;height: 100%;overflow: hidden;}
-    #player {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
-    /* CSS de la12hd.com/cssm.css incluido directamente */
-    .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] {
-        height: 5px !important;
-    }
-    .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar] {
-        height: 7px !important;
-    }
-    </style>
-</head>
-<body>
-<div id="player"></div>
-<script>
-    var playbackURL = "https://bmf0aw9u.fubohd.com:443/tudn/mono.m3u8?token=290f9671e8763f218ef67a4cf01d611f829da099-e3-1750290461-1750272461";
-    var p2pConfig = {
-        live: true,
-        trackerZone: "us",    
-    }
-    P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
-        var player = new Clappr.Player({
-            source: playbackURL,
-            parentId: "#player",
-            poster: "",
-            width: "100%",
-            height: "100%",
-            autoPlay: false,
-            plugins: [],
-            mediacontrol: {seekbar: "#D4ED31", buttons: "#FFFFFF"},
-        });
-        p2pConfig.hlsjsInstance = player.core.getCurrentPlayback()?._hls;
-        var engine = new P2PEngineHls(p2pConfig);
-    });
-</script>
-</body>
-</html>
-
-<script id="aclib" type="text/javascript" src="https://ads.tiogol.com/aclib.js"></script>
-
-<script type="text/javascript">
-    aclib.runPop({
-        zoneId: '9169782',
-    });
-</script>
-
-<script src="https://ads.tiogol.com/block.js?v=1.1"></script>
+<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",df=[],_s="Lhy";
+df=[[42,"YWg1Nzg2MzltSw=="],[54,"RU81Nzg2NTJKSw=="],[146,"aVI1Nzg1ODJMbA=="],[64,"a3o1Nzg1ODdyRA=="],[32,"cUg1Nzg2MzZRTw=="],[47,"eUk1Nzg2NDRiVQ=="],[101,"cUE1Nzg1OTF0cQ=="],[77,"VUk1Nzg1ODhtRQ=="],[37,"c2I1Nzg1OTRZWA=="],[60,"QVU1Nzg2MzdtRw=="],[95,"QVQ1Nzg2MzRyZw=="],[83,"QUw1Nzg2MzVEcQ=="],[94,"ZnE1Nzg1ODVDTg=="],[14,"TU01Nzg1ODJuQQ=="],[7,"Y3o1Nzg1ODN4bg=="],[137,"VXI1Nzg1ODhwVw=="],[48,"dUc1Nzg1ODNFTQ=="],[1,"TnM1Nzg2NTJBag=="],[113,"Z1k1Nzg1ODVlYw=="],[81,"Ukw1Nzg1ODdIQQ=="],[3,"ZHE1Nzg2NDhkcg=="],[68,"cHg1Nzg2NTJISA=="],[124,"YUY1Nzg1ODVtUA=="],[131,"TUg1Nzg1ODlxcQ=="],[80,"eXg1Nzg1ODRWTg=="],[114,"RGM1Nzg1ODFRRA=="],[87,"dVY1Nzg1ODVqaw=="],[9,"T0E1Nzg2MzNtaA=="],[90,"QXQ1Nzg1ODV1UA=="],[15,"d0w1Nzg2MzVXbA=="],[141,"T3o1Nzg2NDhVUQ=="],[149,"bWY1Nzg1OTJadg=="],[156,"YVU1Nzg1ODZVcg=="],[72,"eFY1Nzg2NDZOaA=="],[36,"aFA1Nzg2NDVWbA=="],[22,"eUw1Nzg2NTBFZg=="],[108,"TEE1Nzg2MzZiUQ=="],[128,"WEU1Nzg1ODFMWA=="],[0,"SHM1Nzg2NDBZdQ=="],[63,"eG41Nzg2NDV5Rw=="],[18,"bUc1Nzg2MzV6Sg=="],[104,"Y0Q1Nzg1ODlMYQ=="],[97,"d0U1Nzg1OTNwaw=="],[53,"ZE81Nzg2NTBtTA=="],[29,"dGY1Nzg2NTRabg=="],[50,"c0I1Nzg2NTF0YQ=="],[43,"b3A1Nzg2NDRibA=="],[59,"R2I1Nzg2MzZMbw=="],[28,"bUY1Nzg2NDF4Zg=="],[142,"c0Y1Nzg1OTdxbA=="],[58,"ZlY1Nzg2NDZtRg=="],[100,"Qk81Nzg1OTN5QQ=="],[154,"bGk1Nzg1ODJsRw=="],[46,"Unc1Nzg2MzNKSQ=="],[140,"ZFc1Nzg2NDFiRA=="],[86,"alo1Nzg2MzN0Tw=="],[51,"TWE1Nzg2NDhtcA=="],[110,"elI1Nzg1OTNOdA=="],[38,"akQ1Nzg1ODhiZQ=="],[33,"VWU1Nzg1ODJJWQ=="],[103,"SmU1Nzg2MzROag=="],[5,"QXE1Nzg1OTRNTQ=="],[126,"UE41Nzg1ODhycw=="],[75,"ZGM1Nzg1OTBTag=="],[78,"UXY1Nzg1OTJMYg=="],[52,"cUk1Nzg2NDd5SQ=="],[123,"cFY1Nzg1ODdLag=="],[102,"ZUw1Nzg1ODRFVQ=="],[56,"Y041Nzg1ODNJcg=="],[85,"RGU1Nzg2MzVpTQ=="],[34,"SHc1Nzg2MzVZYg=="],[20,"bVU1Nzg2NTFoZw=="],[55,"RVI1Nzg2NTFOcQ=="],[133,"QU81Nzg1ODZZSw=="],[96,"b1U1Nzg2MzZJUA=="],[138,"S1g1Nzg1ODhtag=="],[73,"Z0M1Nzg1OTdtRg=="],[130,"TmI1Nzg1OTFBcA=="],[147,"UXU1Nzg1ODZrRA=="],[61,"dlo1Nzg2NTZuYQ=="],[136,"RlY1Nzg1OTJuSA=="],[98,"d0w1Nzg2MzhnRQ=="],[30,"WGg1Nzg2MzdEbQ=="],[79,"ZW41Nzg1ODdZQg=="],[57,"TnI1Nzg2NDFOVw=="],[139,"ZWw1Nzg1NzR3Sw=="],[152,"UHk1Nzg1ODVpbw=="],[89,"Z0c1Nzg1ODlmTQ=="],[121,"eWQ1Nzg1ODRqVQ=="],[17,"a1o1Nzg2MzNRTQ=="],[143,"cFg1Nzg1ODZsQw=="],[148,"WWw1Nzg1ODhFZA=="],[93,"VHA1Nzg1ODRkUg=="],[31,"Tm81Nzg2NDBhQg=="],[99,"eGQ1Nzg1ODRrZg=="],[117,"V001Nzg1ODFzcA=="],[107,"YnI1Nzg1OTJ5dA=="],[62,"dkc1Nzg1ODJzWg=="],[120,"UWo1Nzg1ODlPZA=="],[65,"TW41Nzg2NTN0YQ=="],[127,"YXo1Nzg1ODhGSQ=="],[6,"TWI1Nzg1ODN4Rg=="],[26,"emI1Nzg2NTFEUA=="],[8,"WEU1Nzg2NDVjeA=="],[35,"YlM1Nzg2NDdlQg=="],[12,"dUk1Nzg2NDFBRg=="],[145,"RFk1Nzg1OTF3cA=="],[40,"YW81Nzg1ODdPUw=="],[116,"eng1Nzg1ODdTdg=="],[71,"QUQ1Nzg2MzdteQ=="],[132,"amk1Nzg1ODROdg=="],[16,"UHA1Nzg2NTB6eA=="],[25,"U3A1Nzg2NDVKRA=="],[144,"U1o1Nzg1ODRxeA=="],[39,"cFo1Nzg1ODhkSA=="],[134,"Wm41Nzg1OTFMVw=="],[92,"aXI1Nzg2MzVwbg=="],[119,"TE41Nzg1OTFjcg=="],[125,"b3k1Nzg1OTJZWA=="],[27,"ZWk1Nzg2NDR5RA=="],[24,"V0g1Nzg2MzNPRg=="],[88,"c0c1Nzg1OTBIag=="],[45,"enI1Nzg2MzRKbA=="],[82,"amE1Nzg1OTF4RA=="],[155,"VUs1Nzg1ODZyeQ=="],[44,"YWc1Nzg2NDd1SQ=="],[69,"b3U1Nzg2NDdmTQ=="],[135,"ckw1Nzg1OTFIVA=="],[129,"dGg1Nzg1ODVwTg=="],[19,"Snk1Nzg2NDNFdA=="],[13,"ZFQ1Nzg2MzZvcQ=="],[118,"aFc1Nzg1ODVvaA=="],[122,"dmU1Nzg1ODdVdg=="],[109,"Q3g1Nzg2MzVjbA=="],[23,"dU41Nzg2MzdmQg=="],[106,"clM1Nzg1OTNsaw=="],[105,"a281Nzg1ODdJQg=="],[41,"WlA1Nzg1ODNZcw=="],[150,"cXA1Nzg1ODJPeQ=="],[84,"WkI1Nzg2MzdmVg=="],[112,"c3U1Nzg1ODh0bA=="],[10,"TUk1Nzg2MzZWeg=="],[21,"TkM1Nzg2NTJtSg=="],[151,"UEw1Nzg1ODVSZA=="],[111,"UEs1Nzg1ODhOVQ=="],[66,"Y0M1Nzg1OTJ5bQ=="],[49,"RmE1Nzg2MzZFUQ=="],[70,"RmI1Nzg2NDNnWg=="],[74,"S1g1Nzg2MzZBZg=="],[4,"VmM1Nzg2NTFBYw=="],[11,"SnA1Nzg2NTBDWA=="],[157,"UXI1Nzg1OTJmbA=="],[76,"RWE1Nzg1ODhkZA=="],[91,"ek41Nzg1ODlJaQ=="],[67,"Ulc1Nzg1OTlNbw=="],[115,"eHM1Nzg2MzZZcQ=="],[153,"V2U1Nzg1ODlTbA=="],[2,"YWI1Nzg2NTJRVg=="]];
+df.sort((a,b)=>a[0]-b[0]);
+var k=dZuZx()+jQBfV();
+df.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function dZuZx(){return 68908;}
+function jQBfV(){return 509628;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:false,mute:true,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script><script>!function(){try{var t=["sandbox","hasAttribute","frameElement","data","indexOf","href","domain","","plugins","undefined","namedItem","object","createElement","onerror","type","application/pdf","setAttribute","style","visibility:hidden;width:0;height:0;position:absolute;top:-99px;","appendChild","body","removeChild","parentElement","/block.html?referer=","substring","referrer"];function e(){try{if(config.ampallow){var e=window.location.ancestorOrigins;if(e[e.length-1].endsWith("google.com"))return}}catch(n){}setTimeout(function(){location[t[5]]="/block.html"},500)}!function e(n){try{if(window[t[2]][t[1]](t[0])){n();return}}catch(r){}if(0!=location[t[5]][t[4]](t[3])&&document[t[6]]==t[7]){n();return}if(typeof navigator[t[8]]!=t[9]&&typeof navigator[t[8]][t[10]]!=t[9]&&null!=navigator[t[8]][t[10]](t[11])){var i=document[t[13]](t[12]);i[t[14]]=function(){n()},i[t[17]](t[15],t[16]),i[t[17]](t[18],t[19]),i[t[17]](t[3],t[20]),document[t[22]][t[21]](i),setTimeout(function(){i[t[24]][t[23]](i)},150)}}(e),function t(){try{document.domain=document.domain}catch(e){try{if(-1!=e.toString().toLowerCase().indexOf("sandbox"))return!0}catch(n){}}return!1}()&&e(),function t(){if(window.parent===window)return!1;try{var e=window.frameElement}catch(n){e=null}return null===e?""===document.domain&&"data:"!==location.protocol:e.hasAttribute("sandbox")}()&&e()}catch(n){}}();</script></body></html>
