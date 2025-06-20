@@ -1,12 +1,12 @@
 window.partidosProgramados = [
-  "P1 Costa Rica vs Republica Dominicana ",
-  "P2 Surinam  vs México",
-  "P3 Manchester City vs WAC Casablanca",
-  "P4 Real Madrid  vs Al Hilal",
-  "P5 Pachuca  vs Red Bull Salzburg ",
-  "P6 Al Ain   vs Juventus ",
-  "P7 Arabia Saudí  vs Estados Unidos ",
-  "P8 Inter Miami CF  vs FC Porto ",
-  "P9 Seattle Sounders  vs At. Madrid ",
-  "P10 PSG   vs Botafogo "
+  "P1 Inter Milan vs Urawa Red Diamonds ",
+  "P2 Fluminense vs Ulsan Hyundai",
+  "P3 River Plate vs Monterrey ",
+  "P4 Curazao  vs Canadá ",
+  "P5 Honduras vs El Salvador ",
+  "P6 Arabia Saudí vs Trinidad y Tobago ",
+  "P7 México vs Costa Rica ",
+  "P8 Real Madrid vs Pachuca  ",
+  "P9 Red Bull Salzburg vs Al Hilal ",
+  "P10 República Dominicana vs Surinam  "
 ];
