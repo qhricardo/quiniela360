@@ -194,6 +194,7 @@
           // Guardar datos si es nuevo
           await userRef.set({
             uid: user.uid,
+            creditos: 1
             name: user.displayName || null,
             email: user.email,
             photoURL: user.photoURL || null,
