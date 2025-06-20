@@ -42,10 +42,4 @@ header {
 .error-message {
     color: #d9534f;
     margin-top: 10px;
-}
-#google-login {
-  background: #4285F4;
-}
-#google-login:hover {
-  background: #3367D6;
-}
+
