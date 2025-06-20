@@ -6,16 +6,13 @@
   <title>Quiniela 360 - Login</title>
   <style>
     body {
-        font-family: 'Arial', sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1569337042150-c21c85b80a10?q=80&w=1540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Cambia esta URL por la tuya */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #006847 0%, #ce1126 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
     .login-container {
       background: white;
@@ -131,15 +128,18 @@
     </div>
   </div>
 
-  <!-- Firebase SDK -->
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
 
-  <!-- Configuración Firebase -->
+  <!-- Configuración de Firebase -->
   <script src="js/firebase-config.js"></script>
 
   <!-- Lógica de autenticación -->
   <script>
+    const db = firebase.firestore();
+
     // Login con correo y contraseña
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -175,13 +175,29 @@
       }
     });
 
-    // Login con Google
+    // Login con Google y registro automático en Firestore
     document.getElementById('google-login').addEventListener('click', async () => {
       const provider = new firebase.auth.GoogleAuthProvider();
 
       try {
         const result = await firebase.auth().signInWithPopup(provider);
         const user = result.user;
+
+        // Referencia al documento del usuario
+        const userRef = db.collection('users').doc(user.uid);
+        const doc = await userRef.get();
+
+        if (!doc.exists) {
+          // Guardar datos si es nuevo
+          await userRef.set({
+            uid: user.uid,
+            displayName: user.displayName || null,
+            email: user.email,
+            photoURL: user.photoURL || null,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          });
+        }
+
         window.location.href = "index.html";
       } catch (error) {
         alert("Error al iniciar sesión con Google: " + error.message);
