@@ -17,104 +17,87 @@
             height: 100vh;
             margin: 0;
     }
-       .login-container {
+      .login-container {
       background: white;
-      padding: 20px;
+      padding: 2rem;
       border-radius: 10px;
-      width: 90%;
-      max-width: 350px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      width: 350px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-
     h1 {
-      text-align: center;
       color: #006847;
-      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
-
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
     }
-
-    label {
+    .form-group label {
       display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
     }
-
-    input {
+    .form-group input {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       border-radius: 5px;
+      font-size: 16px;
     }
-
-    button {
+    button, #google-login {
       width: 100%;
       padding: 12px;
-      background-color: #006847;
+      background: #006847;
       color: white;
       border: none;
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #004d33;
-    }
-
-    .divider {
-      text-align: center;
-      margin: 15px 0;
-      font-weight: bold;
-      color: #666;
-    }
-
-    #google-login {
-      background-color: #4285F4;
-      color: white;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
+      transition: background 0.3s;
       margin-top: 10px;
     }
-
-    #google-login img {
-      width: 20px;
-      height: 20px;
+    button:hover, #google-login:hover {
+      background: #004d33;
     }
-
+    #form-message {
+      margin-top: 1rem;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+      text-align: center;
+    }
+    .error {
+      background: #ffebee;
+      color: #c62828;
+    }
     .register-link {
       text-align: center;
-      margin-top: 15px;
+      margin-top: 1.5rem;
     }
-
     .register-link a {
       color: #006847;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
-
-    iframe {
-      width: 100%;
-      max-width: 640px;
-      aspect-ratio: 16 / 9;
-      border: none;
-      margin-bottom: 40px;
-    }
-
-    .error {
-      margin-top: 10px;
-      color: red;
+    .divider {
       text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ccc;
+    }
+    .divider::before {
+      left: 0;
+    }
+    .divider::after {
+      right: 0;
     }
   </style>
 </head>
