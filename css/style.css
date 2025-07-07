@@ -42,4 +42,12 @@ header {
 .error-message {
     color: #d9534f;
     margin-top: 10px;
-
+    
+#recuadro-fecha-hora {
+  background-color: #003366;
+  color: #ffffff;
+  border-bottom: 4px solid #ffcc00;
+}
+#recuadro-fecha-hora div {
+  font-size: 1rem;
+}
