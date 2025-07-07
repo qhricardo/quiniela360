@@ -1,12 +1,12 @@
 window.partidosProgramados = [
-  "P1 Panamá  vs Jamaica  ",
-  "P2 Guadalupe  vs Guatemala ",
-  "P3 Honduras  vs Curazao  ",
-  "P4 Canadá   vs El Salvador ",
-  "P5 Benfica  vs FC Bayern ",
-  "P6 Auckland City vs Boca Juniors ",
-  "P7 Los Angeles FC vs CR Flamengo ",
-  "P8 Mamelodi Sundowns vs Fluminense  ",
-  "P9 Inter Milan vs River Plate ",
-  "P10 Urawa Red Diamonds vs Monterrey   "
+  "P1 Puebla  vs Atlas  ",
+  "P2 Tijuana  vs Queretaro ",
+  "P3 Fc Juarez  vs America  ",
+  "P4 Toluca   vs Necaxa ",
+  "P5 Santos   vs Puebla ",
+  "P6 Cruz Azul vs Mazatlan ",
+  "P7 Pachuca vs Monterrey ",
+  "P8 Leon vs San Luis  ",
+  "P9 Tigres Femenil vs Toluca Femenil ",
+  "P10 Real Madrid vs Chelsea   "
 ];
