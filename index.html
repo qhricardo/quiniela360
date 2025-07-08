@@ -442,7 +442,12 @@
             document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
-        
+            // Inicia el intervalo al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCountdown();
+            countdownInterval = setInterval(updateCountdown, 1000);
+        });
+
         // Manejar estado de autenticación
         firebase.auth().onAuthStateChanged(async (user) => {
             if (!user) {
