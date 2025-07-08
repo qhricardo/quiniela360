@@ -129,14 +129,18 @@
             margin-top: 20px;
             color: var(--verde);
         }
-        #recuadro-fecha-hora {
-          background-color: #003366;
-          color: #ffffff;
-          border-bottom: 4px solid #ffcc00;
-        }
-        #recuadro-fecha-hora div {
-           font-size: 1rem;
-        }
+    #countdown {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  color: #006847;
+  background: #f5f5f5;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+#countdown span {
+  font-weight: bold;
+}
     </style>
 </head>
 <body>
@@ -157,7 +161,16 @@
     <div style="flex: 1 1 250px; max-width: 300px; background-color: #fff; border: 2px solid #006847; border-radius: 10px; padding: 15px; margin: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   <h3 style="color: #006847; text-align: center;">📢 Avisos</h3>
   <ul id="avisos-lista" style="list-style-type: none; padding-left: 0; font-size: 14px;">
-    <li>🎯 Cierre de Pronosticos Jueves 10 de julio 2025 23:00hrs</li>
+   <li>🎯 Cierre de Pronósticos</li>
+                <!-- Contador regresivo -->
+                <li>
+                    <div id="countdown">
+                        <span id="days">00</span> días
+                        <span id="hours">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                    </div>
+                </li>
     <li>💰 Compra créditos vía WhatsApp costo $25.00 mxn.</li>
     <li>🏆 Proxima Quiniela inicia Lunes 14 de julio 2025 08:00hrs.</li>
     <li>.</li>
@@ -404,6 +417,32 @@
         let currentUser = null;
         let userCredits = 0;
 
+// Fecha meta para contador (11 de julio 2025, 23:00hrs)
+        const targetDate = new Date('2025-07-11T08:00:00');
+
+        // Función para actualizar el contador
+        function updateCountdown() {
+            const now = new Date();
+            const diffMs = targetDate - now;
+            if (diffMs <= 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            const totalSeconds = Math.floor(diffMs / 1000);
+            const days = Math.floor(totalSeconds / (3600 * 24));
+            const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
         // Manejar estado de autenticación
         firebase.auth().onAuthStateChanged(async (user) => {
             if (!user) {
@@ -523,7 +562,8 @@ if (userDoc.exists) {
         document.getElementById('logout-btn').addEventListener('click', () => {
             firebase.auth().signOut();
         });
-
+<script src="countdown.js"></script>
+        
     </script>
     <footer style="background-color: #1a1a1a; color: white; padding: 40px 20px; font-family: 'Arial', sans-serif;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
