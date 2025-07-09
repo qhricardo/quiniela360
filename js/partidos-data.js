@@ -8,5 +8,5 @@ window.partidosProgramados = [
   "P7 Pachuca vs Monterrey ",
   "P8 Leon vs San Luis  ",
   "P9 Tigres Femenil vs Toluca Femenil ",
-  "P10 Real Madrid vs Chelsea   "
+  "P10 PSG vs Chelsea   "
 ];
