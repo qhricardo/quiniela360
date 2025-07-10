@@ -3,7 +3,7 @@ window.partidosProgramados = [
   "P2 Tijuana  vs Queretaro ",
   "P3 Fc Juarez  vs America  ",
   "P4 Toluca   vs Necaxa ",
-  "P5 Santos   vs Puebla ",
+  "P5 Santos   vs Pumas ",
   "P6 Cruz Azul vs Mazatlan ",
   "P7 Pachuca vs Monterrey ",
   "P8 Leon vs San Luis  ",
