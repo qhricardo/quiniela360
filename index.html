@@ -124,6 +124,11 @@
             padding: 12px 25px;
             font-size: 16px;
         }
+        #guardar-btn:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
         #guardar-btn:hover {
             background-color: #004d33;
         }
@@ -429,10 +434,8 @@
             const diffMs = targetDate - now;
             if (diffMs <= 0) {
                 clearInterval(countdownInterval);
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
+                ['days','hours','minutes','seconds'].forEach(id => document.getElementById(id).textContent = '00');
+                document.getElementById('guardar-btn').disabled = true;
                 return;
             }
             const totalSeconds = Math.floor(diffMs / 1000);
