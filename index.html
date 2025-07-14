@@ -222,24 +222,34 @@
 </div>
 </div>
 
-<div style="
-      float: right;
-      width: 320px;      /* ancho fijo */
-      position: relative;
-      top: -400px;            /* Sube el bloque 20px */
+<div style="position: relative; padding: 20px; background: #f9f9f9;">
+
+  <!-- Aquí va TODO tu contenido de la izquierda -->
+  <div>
+    <h2>Tabla General</h2>
+   </div>
+
+  <!-- Y este es el div ABSOLUTO, pegado arriba a la derecha -->
+  <div style="
+      position: absolute;
+      top: -10px;       /* Si quieres subirlo aún más, aumenta el valor negativo */
+      right: 0;         /* Pegado al borde derecho */
+      width: 300px;     /* Ajusta el ancho que necesites */
   ">
-  <img
-    src="https://i.postimg.cc/htbsqkgb/tabla-general.png"
-    alt="Tabla General Liga MX"
-    style="
-      display: block;
-      width: 100%;             /* Siempre ocupará todo el ancho del contenedor */
-      height: auto;
-      border: 2px solid #006847;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    "
-  >
+    <img
+      src="https://i.postimg.cc/htbsqkgb/tabla-general.png"
+      alt="Tabla General Liga MX"
+      style="
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 2px solid #006847;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      "
+    >
+  </div>
+
 </div>
 
     <!-- 🔵 Tu contenido principal va aquí -->
