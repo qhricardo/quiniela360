@@ -208,6 +208,75 @@
         padding: 4px;
       }
     }
+<!-- ─── Partidos live ─────────── -->
+        /* Estilos base */
+  .live-wrapper {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .btn-live {
+    background-color: #006847;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .iframe-container {
+    margin-top: 20px;
+    /* centrar el iframe en móviles */
+    display: flex;
+    justify-content: center;
+  }
+  .iframe-container iframe {
+    border: 2px solid #006847;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 640px;     /* ancho base */
+    height: 320px;    /* alto base */
+  }
+
+  /* Tablets y pantallas medianas (≤1024px) */
+  @media screen and (max-width: 1024px) {
+    .iframe-container iframe {
+      width: 80%;      /* ocupa 80% del contenedor */
+      height: auto;    /* ajusta proporcionalmente */
+    }
+    .btn-live {
+      font-size: 15px;
+      padding: 8px 16px;
+    }
+  }
+
+  /* Móviles grandes (≤768px) */
+  @media screen and (max-width: 768px) {
+    .iframe-container iframe {
+      width: 100%;     /* ocupa todo el ancho disponible */
+      max-width: 480px;
+      height: auto;
+    }
+    .btn-live {
+      width: 90%;
+      max-width: 300px;
+      font-size: 14px;
+    }
+  }
+
+  /* Móviles pequeños (≤480px) */
+  @media screen and (max-width: 480px) {
+    .iframe-container iframe {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+    }
+    .btn-live {
+      width: 100%;
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+</style>
   </style>
         
     </style>
@@ -271,14 +340,17 @@
             <path d="M8 5v14l11-7z"/>
         </svg>
        Partido en Vivo
-    </button>
-         <div style="margin-top: 20px;">
-        <iframe src="live.html" width="640" height="320" style="
-            border: 2px solid #006847;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        " title="Vista previa partido en vivo"></iframe>
-    </div>
+  <div class="live-wrapper">
+  <button class="btn-live">
+    Partido en Vivo
+  </button>
+  <div class="iframe-container">
+    <iframe 
+      src="live.html" 
+      title="Vista previa partido en vivo"
+    ></iframe>
+  </div>
+</div>
 </div>
 </div>
 
