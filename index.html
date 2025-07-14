@@ -151,18 +151,12 @@
   font-weight: bold;
 }
   /* Estilos del recuadro derecho */
-  #recuadro-derecho {
-    position: static;      /* Lo saca del flujo normal */
-    top: 200px;               /* A 20px del borde superior */
-    right: 10px;             /* A 20px del borde derecho */
-    width: 300px;            /* Ancho fijo (ajústalo) */
-    background-color: #fff;
-    border: 2px solid #006847;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 1000;           /* Para que quede por encima */
-  }
+ #recuadro-derecho {
+  float: right;
+  width: 300px;
+  margin: 20px;         /* separaciones a tu gusto */
+  /* borra position, top, right */
+}
   #recuadro-derecho img {
     display: block;
     width: 100%;
