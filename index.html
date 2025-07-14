@@ -169,7 +169,46 @@
     height: auto;
     border-radius: 5px;
   }
-</style>
+
+     /* Tablet (≤1024px) */
+    @media screen and (max-width: 1024px) {
+      #recuadro-derecho {
+        width: 250px;
+        top: 15px;
+        right: 15px;
+      }
+      #tabla-standings th, #tabla-standings td {
+        font-size: 13px;
+        padding: 6px;
+      }
+    }
+
+    /* Móvil grande (≤768px) */
+    @media screen and (max-width: 768px) {
+      #recuadro-derecho {
+        position: static;
+        width: 90%;
+        margin: 0 auto 20px;
+        top: auto;
+        right: auto;
+      }
+      #tabla-standings {
+        margin-top: 0;
+      }
+    }
+
+    /* Móvil pequeño (≤480px) */
+    @media screen and (max-width: 480px) {
+      #recuadro-derecho {
+        padding: 5px;
+        box-shadow: none;
+      }
+      #tabla-standings th, #tabla-standings td {
+        font-size: 12px;
+        padding: 4px;
+      }
+    }
+  </style>
         
     </style>
 </head>
