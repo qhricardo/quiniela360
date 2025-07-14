@@ -150,6 +150,27 @@
 #countdown span {
   font-weight: bold;
 }
+  /* Estilos del recuadro derecho */
+  #recuadro-derecho {
+    position: absolute;      /* Lo saca del flujo normal */
+    top: 20px;               /* A 20px del borde superior */
+    right: 20px;             /* A 20px del borde derecho */
+    width: 300px;            /* Ancho fijo (ajústalo) */
+    background-color: #fff;
+    border: 2px solid #006847;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;           /* Para que quede por encima */
+  }
+  #recuadro-derecho img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+</style>
+        
     </style>
 </head>
 <body>
@@ -222,33 +243,10 @@
 </div>
 </div>
 
-<div style="position: relative; padding: 20px; background: #f9f9f9;">
-
-  <!-- Aquí va TODO tu contenido de la izquierda -->
-  <div>
-    <h2>Tabla General</h2>
-   </div>
-
-  <!-- Y este es el div ABSOLUTO, pegado arriba a la derecha -->
-  <div style="
-      position: absolute;
-      top: -10px;       /* Si quieres subirlo aún más, aumenta el valor negativo */
-      right: 0;         /* Pegado al borde derecho */
-      width: 300px;     /* Ajusta el ancho que necesites */
-  ">
-    <img
-      src="https://i.postimg.cc/htbsqkgb/tabla-general.png"
-      alt="Tabla General Liga MX"
-      style="
-        display: block;
-        width: 100%;
-        height: auto;
-        border: 2px solid #006847;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      "
-    >
-  </div>
+<div id="recuadro-derecho">
+  <img src="https://i.postimg.cc/htbsqkgb/tabla-general.png"
+       alt="Tabla General Liga MX">
+</div>
 
 </div>
 
