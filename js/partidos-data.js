@@ -1,12 +1,13 @@
 window.partidosProgramados = [
-  "P1 Necaxa  vs Queretaro  ",
-  "P2 San Luis  vs Monterrey ",
-  "P3 Mazatlan  vs Puebla  ",
-  "P4 Tigres   vs Juarez ",
-  "P5 Leon  vs Chivas ",
-  "P6 Atlas vs Cruz Azul ",
-  "P7 Pumas vs Pachuca ",
-  "P8 America vs Toluca  ",
-  "P9 Tigres Femenil vs Necaxa Femenil ",
-  "P10 Los Angeles vs LA Galaxy  "
+  "P1 Queretaro  vs San Luis  ",
+  "P2 Juarez  vs Santos ",
+  "P3 Tijuana  vs Chivas  ",
+  "P4 Leon   vs Pachuca ",
+  "P5 Monterrey  vs Necaxa ",
+  "P6 Mazatlan vs Tigres ",
+  "P7 Cruz Azul vs Toluca ",
+  "P8 Pumas vs Puebla  ",
+  "P9 Atlas vs America ",
+  "P10 Atletico San Luis Femenil vs Necaxa Femenil  "
 ];
+
