@@ -187,7 +187,7 @@
       const snapshot = await db.collection('pronosticos').orderBy('fecha', 'desc').get();
       const totalPronosticos = snapshot.size;
       const montoTotal = totalPronosticos * 200;
-      const premioFinal = montoTotal * 1;
+      const premioFinal = montoTotal * .8;
       document.getElementById('premio-total').textContent = `$${premioFinal.toFixed(2)} MXN`;
 
       const resultadosOficiales = {};
@@ -330,6 +330,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
